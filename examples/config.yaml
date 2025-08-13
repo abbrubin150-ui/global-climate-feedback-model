@@ -1,0 +1,23 @@
+# דוגמת קונפיגורציה להפעלה דרך 'עדכונחי'
+grid:
+  nx: 10
+  ny: 20
+  dx: 10000
+  dy: 10000
+
+drivers:
+  solar_rad: 320   # W/m^2
+  precip_mm: 0
+  irrigation_mm: 0
+
+winds:
+  u: 5   # m/s ממערב למזרח
+  v: 0
+
+experiments:
+  - name: "moisture_patch_demo"
+    inject_patch:
+      i_range: [3, 7]
+      j_range: [2, 5]
+      q_values: [0.015, 0.025, 0.015]
+    days: 5
